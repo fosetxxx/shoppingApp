@@ -34,7 +34,7 @@ struct ContentView: View {
                 DiscountCategories(imageName: "orgu")
                 DiscountCategories(imageName: "orgu")
                 DiscountCategories(imageName: "orgu")
-            }
+            }.padding(.vertical)
             
             ProductPreview()
 

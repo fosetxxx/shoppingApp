@@ -14,7 +14,7 @@ struct ProductPreview: View {
     
     var body: some View{
             VStack {
-                Text("Son gezilen ürünler...")
+                Text("Son gezilen ürünler")
                 ScrollView(Axis.Set.horizontal, showsIndicators: false){
                     HStack{
                         ForEach(self.usedImages, id: \.self) { usedImage in
