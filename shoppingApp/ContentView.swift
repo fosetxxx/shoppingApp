@@ -8,14 +8,41 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var searchText = ""
     var body: some View {
+        
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            HStack{
+                Image("greenLogo")
+                    .resizable()
+                    .frame(width: 70, height: 60)
+                    .padding(.leading, 5)
+                SearchBar(text: $searchText)
+            }
+            
+            AdScrollView()
+            
+            HStack {
+                DiscountCategories(imageName: "orgu")
+                DiscountCategories(imageName: "orgu")
+                DiscountCategories(imageName: "orgu")
+                DiscountCategories(imageName: "orgu")
+            }
+            
+            HStack {
+                DiscountCategories(imageName: "orgu")
+                DiscountCategories(imageName: "orgu")
+                DiscountCategories(imageName: "orgu")
+                DiscountCategories(imageName: "orgu")
+            }
+            
+            ProductPreview()
+
+            Spacer()
+            
+            
+            
         }
-        .padding()
     }
 }
 
@@ -24,3 +51,6 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+
+
